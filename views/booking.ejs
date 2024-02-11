@@ -1,0 +1,40 @@
+<!-- views/booking.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Car - A&A Car Rentals</title>
+    <link rel="stylesheet" href="/styles/booking-styles.css"> <!-- You can create a new CSS file for booking styles -->
+    <!-- Add any additional styles or scripts as needed -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Book a Car with A&A Car Rentals</h1>
+        </header>
+        <section class="booking-form">
+            <h2>Make a Reservation</h2>
+            <form action="/booking" method="POST">
+                <label for="pickupLocation">Pickup Location:</label>
+                <input type="text" id="pickupLocation" name="pickupLocation" placeholder="Enter pickup location" required>
+
+                <label for="dropoffLocation">Dropoff Location:</label>
+                <input type="text" id="dropoffLocation" name="dropoffLocation" placeholder="Enter dropoff location" required>
+
+                <label for="pickupDate">Pickup Date:</label>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+
+                <label for="dropoffDate">Dropoff Date:</label>
+                <input type="date" id="dropoffDate" name="dropoffDate" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 A&A Car Rentals. All rights reserved.</p>
+    </footer>
+</body>
+</html>
