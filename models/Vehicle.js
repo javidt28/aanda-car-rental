@@ -2,10 +2,11 @@
 const mongoose = require('mongoose');
 
 const vehicleSchema = new mongoose.Schema({
-  brand: { type: String, required: true },
-  model: { type: String, required: true },
-  year: { type: Number, required: true },
-  // Add more fields as needed
+    make: { type: String, required: true },
+    model: { type: String, required: true },
+    category: { type: String, required: true },
+    description: { type: String, required: true },
+    imageUrl: { type: String, required: true }
 });
 
 const Vehicle = mongoose.model('Vehicle', vehicleSchema);

@@ -1,3 +1,5 @@
+const Vehicle = require('../models/Vehicle'); // Import your mongoose model
+
 // routes/index.js
 const express = require('express');
 const router = express.Router();
@@ -45,10 +47,19 @@ router.get('/auth/login', (req, res) => {
   res.render('login', { title: 'Login' });
 });
 
-router.get('/our-fleet', (req, res) => {
-  // Render the Our Fleet page
-  res.render('our-fleet'); // Assuming you have a view file named "our-fleet.ejs"
+router.get('/our-fleet', async (req, res) => {
+  try {
+    // Fetch vehicles from the database
+    const vehicles = await Vehicle.find();
+
+    // Render the our-fleet.ejs template and pass the vehicles variable
+    res.render('our-fleet', { vehicles });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
 });
+
 
 // Vehicle Details Page
 router.get('/vehicle/:vehicleId', (req, res) => {

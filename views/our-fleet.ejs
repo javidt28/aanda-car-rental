@@ -35,6 +35,21 @@
 
     <!-- Add more sections or content as needed -->
 
+    <section class="our-fleet-content">
+        <h1>Our Fleet</h1>
+    
+        <div class="fleet-cards">
+            <% vehicles.forEach(vehicle => { %>
+                <div class="vehicle-card">
+                    <img src="<%= vehicle.imageUrl %>" alt="<%= vehicle.make %> <%= vehicle.model %> Image">
+                    <h2><%= vehicle.make %> <%= vehicle.model %></h2>
+                    <p><strong>Category:</strong> <%= vehicle.category %></p>
+                    <p><%= vehicle.description %></p>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+    
     <footer class="footer">
         <p>&copy; 2024 A&A Car Rental. All rights reserved.</p>
     </footer>
