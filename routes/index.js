@@ -45,6 +45,11 @@ router.get('/auth/login', (req, res) => {
   res.render('login', { title: 'Login' });
 });
 
+router.get('/our-fleet', (req, res) => {
+  // Render the Our Fleet page
+  res.render('our-fleet'); // Assuming you have a view file named "our-fleet.ejs"
+});
+
 // Vehicle Details Page
 router.get('/vehicle/:vehicleId', (req, res) => {
   // Placeholder logic to fetch and display vehicle information
