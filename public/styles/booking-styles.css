@@ -9,7 +9,7 @@ body {
 }
 
 .hero {
-    background-image: url('/public/images/booking-hero.jpg'); /* Add your hero image URL */
+    background-image: url('https://raw.githubusercontent.com/javidt28/aanda-car-rental/main/public/images/booking-hero.jpg');
     background-size: cover;
     color: #fff;
     text-align: center;
